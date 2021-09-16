@@ -11,3 +11,5 @@ if [ ! -z "$(git fetch --dry-run)" ]; then
     echo "  pushd $HOME/.config/aws-cloudshell-init; git pull; popd"
     echo ""
 fi
+
+popd
