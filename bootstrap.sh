@@ -20,8 +20,12 @@ popd
 
 
 if ! grep '. aws-cloudshell-init.sh' $HOME/.bash_profile; then
-    echo "# Added by: cyclic-software/aws-cloudshell-init/main/bootstrap.sh\n. $HOME/.config/aws-cloudshell-init/bash_profile.sh" \
-        >> ~/.bash_profile
+    echo << EOF >> ~/.bash_profile
+
+# Added by: cyclic-software/aws-cloudshell-init/main/bootstrap.sh
+. $HOME/.config/aws-cloudshell-init/bash_profile.sh
+
+EOF
 fi
 
 . $HOME/.config/aws-cloudshell-init/bash_profile.sh
