@@ -23,7 +23,7 @@ fi
 # done
 
 if ! grep '. aws-cloudshell-init.sh' ~/.bash_profile; then
-    echo '# Added by: cyclic-software/aws-cloudshell-init/main/bootstrap.sh\n. aws-cloudshell-init.sh' \
+    echo "# Added by: cyclic-software/aws-cloudshell-init/main/bootstrap.sh\n. aws-cloudshell-init.sh" \
         >> ~/.bash_profile
 fi
 
