@@ -5,9 +5,9 @@ export PATH
 
 pushd $HOME/.config/aws-cloudshell-init
 
-if [ ! -z "$(git fetch --dry-run)" ]; do
+if [ ! -z "$(git fetch --dry-run)" ]; then
     echo "Cloudshell init scripts are behind those on github. Consider updating:"
     echo ""
     echo "  pushd $HOME/.config/aws-cloudshell-init; git pull; popd"
     echo ""
-done
+fi
