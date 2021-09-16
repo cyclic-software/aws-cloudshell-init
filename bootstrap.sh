@@ -7,8 +7,8 @@
 # > ...something something
 # > profit!
 
-mkdir -p ~/.config
-pushd ~/.config
+mkdir -p $HOME/.config
+pushd $HOME/.config
 
 if [ ! -d aws-cloudshell-init ]; then
     git clone https://github.com/cyclic-software/aws-cloudshell-init.git
@@ -22,9 +22,9 @@ fi
     # . /etc/profile.d/aws-cloudshell-init.sh
 # done
 
-if ! grep '. aws-cloudshell-init.sh' ~/.bash_profile; then
+if ! grep '. aws-cloudshell-init.sh' $HOME/.bash_profile; then
     echo "# Added by: cyclic-software/aws-cloudshell-init/main/bootstrap.sh\n. aws-cloudshell-init.sh" \
         >> ~/.bash_profile
 fi
 
-. ~/.config/aws-cloudshell-init/aws-cloudshell-init.sh
+. $HOME/.config/aws-cloudshell-init/aws-cloudshell-init.sh
