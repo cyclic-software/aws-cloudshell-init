@@ -16,15 +16,12 @@ else
     cd aws-cloudshell-init
     git pull
 fi
+popd
 
-# if [ ! -f /etc/profile.d/aws-cloudshell-init.sh ]; do
-    # cp aws-cloudshell-init/init/aws-cloudshell-init.sh /etc/profile.d/aws-cloudshell-init.sh
-    # . /etc/profile.d/aws-cloudshell-init.sh
-# done
 
 if ! grep '. aws-cloudshell-init.sh' $HOME/.bash_profile; then
-    echo "# Added by: cyclic-software/aws-cloudshell-init/main/bootstrap.sh\n. aws-cloudshell-init.sh" \
+    echo "# Added by: cyclic-software/aws-cloudshell-init/main/bootstrap.sh\n. $HOME/.config/aws-cloudshell-init/bash_profile.sh" \
         >> ~/.bash_profile
 fi
 
-. $HOME/.config/aws-cloudshell-init/aws-cloudshell-init.sh
+. $HOME/.config/aws-cloudshell-init/bash_profile.sh
